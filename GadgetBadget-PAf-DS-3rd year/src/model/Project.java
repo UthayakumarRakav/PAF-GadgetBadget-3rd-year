@@ -14,7 +14,7 @@ public class Project {
 		Connection con = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/project","root", "");
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/gadgetbadget","root", "");
 			
 			//for testing
 			System.out.print("Successfully connected"); 
