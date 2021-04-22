@@ -99,7 +99,7 @@ public class Customer {
 				// Complete the html table
 			
 		}catch (Exception e){
-			result = "Error while reading the projects.";
+			result = "Error while reading the customer data.";
 			System.err.println(e.getMessage());
 		}
 		return result;
@@ -135,7 +135,7 @@ public class Customer {
 			
 			con.close();
 		}catch(Exception e) {
-			result = "Error while geting the projects.";
+			result = "Error while geting the customer data.";
 			System.err.println(e.getMessage());
 		}
 		return result;		
@@ -168,7 +168,7 @@ public class Customer {
 			result = "Updated successfully";
 
 		}catch(Exception e) {
-			result = "Error while updating the projects.";
+			result = "Error while updating the customer data.";
 			System.err.println(e.getMessage());
 		}		
 		
@@ -194,7 +194,7 @@ public class Customer {
 			result = "Record has been Deleted Successfully";
 
 		}catch(Exception e) {
-			result = "Error while Deleting the Project detail.";
+			result = "Error while Deleting the customer detail.";
 			System.err.println(e.getMessage());
 		}
 		
