@@ -1,6 +1,7 @@
 package com;
 import model.Order;
 
+
 import javax.servlet.http.Part;
 //For REST Service
 import javax.ws.rs.*; 
@@ -14,6 +15,7 @@ import com.mysql.cj.jdbc.Blob;
 import org.jsoup.*; 
 import org.jsoup.parser.*; 
 import org.jsoup.nodes.Document; 
+@Path("/Orders") 
 
 public class OrderService {
 	
