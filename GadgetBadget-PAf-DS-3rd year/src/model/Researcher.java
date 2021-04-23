@@ -105,7 +105,7 @@ public class Researcher {
 				// Complete the html table
 			
 		}catch (Exception e){
-			result = "Error while reading the projects.";
+			result = "Error while reading.";
 			System.err.println(e.getMessage());
 		}
 		return result;
@@ -140,7 +140,7 @@ public class Researcher {
 			
 			con.close();
 		}catch(Exception e) {
-			result = "Error while geting the projects.";
+			result = "Error while geting .";
 			System.err.println(e.getMessage());
 		}
 		return result;		
@@ -174,7 +174,7 @@ public class Researcher {
 			result = "Updated successfully";
 
 		}catch(Exception e) {
-			result = "Error while updating the projects.";
+			result = "Error while updating.";
 			System.err.println(e.getMessage());
 		}		
 		
@@ -201,7 +201,7 @@ public class Researcher {
 			result = "Record has been Deleted Successfully";
 
 		}catch(Exception e) {
-			result = "Error while Deleting the Project detail.";
+			result = "Error while Deleting .";
 			System.err.println(e.getMessage());
 		}
 		
