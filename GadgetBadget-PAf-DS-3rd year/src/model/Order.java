@@ -218,7 +218,7 @@ public class Order {
 				result = "Record has been Deleted Successfully";
 
 			}catch(Exception e) {
-				result = "Error while Deleting the Project detail.";
+				result = "Error while Deleting the Project details";
 				System.err.println(e.getMessage());
 			}
 			
