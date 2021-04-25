@@ -60,7 +60,7 @@
  		<div class="form-row">	
 	    <h1>Make Your Order Here</h1><br>
 		<form method="post" action="Payment.jsp">
-			<input name="payment" type="submit" value="Payment Service" class="btn btn-info" style="margin-left:390%;">
+			<input name="payment" type="submit" value="Payment Service" class="btn btn-info" style="margin-left:400%;">
 		</form>
 		</div>
 
