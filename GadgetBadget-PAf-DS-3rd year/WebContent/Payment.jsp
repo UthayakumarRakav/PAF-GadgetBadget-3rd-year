@@ -29,7 +29,7 @@ session.setAttribute("statusMsg", stsMsg);
 
 <html>
 <head>
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="Views/bootstrap.min.css">
 <meta charset="ISO-8859-1">
 
 
