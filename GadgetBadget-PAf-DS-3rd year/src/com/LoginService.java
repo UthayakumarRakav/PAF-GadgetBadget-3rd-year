@@ -22,7 +22,6 @@ import model.Customer;
 public class LoginService {
 
 	Login login= new Login();
-
 	
 	@POST
 	@Path("/") 
@@ -32,8 +31,4 @@ public class LoginService {
 		String output = login.insertLogin(username, password); 
 		return output; 
 	}
-	
-
-
-
 }
