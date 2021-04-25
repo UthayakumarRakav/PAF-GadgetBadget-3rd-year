@@ -58,8 +58,8 @@ if(i==2){
 		</script>
 		
 		<!-- Top container -->
-		<div style="margin-top:84px;">
-			<div class="w3-bar w3-top w3-black w3-large" style="z-index:4;margin-top:80px;">
+		<div>
+			<div class="w3-bar w3-top w3-black w3-large" style="z-index:4;">
 			  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
 			
 			</div>
@@ -68,11 +68,11 @@ if(i==2){
 			<nav class="w3-sidebar w3-collapse w3-animate-left vidya" style="z-index:3;width:300px;" id="mySidebar"><br>
 			  <div class="w3-container w3-row">
 			    <div class="w3-col s4">
-			      <img src="images/user.jpg" style="width:80px;height:80px;border-radius:50%;margin-top:30px;margin-left:90px;">
+			      <img src="images/user.jpg" style="width:80px;height:80px;border-radius:50%;margin-left:90px;">
 			    </div>
 			  </div>
 			  
-			  <div class="w3-container" style="margin-top:20px;">
+			  <div class="w3-container">
 			    <h5 style="text-align:center;">Researcher</h5>
 			  </div>
 			  <div class="w3-bar-block">

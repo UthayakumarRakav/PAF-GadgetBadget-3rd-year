@@ -42,6 +42,7 @@ public class Customer {
 			preparedStmt.setString(6, city);
 			preparedStmt.setString(7, region);
 			
+			
 			//execute the statement
 			preparedStmt.execute();
 			con.close();
@@ -74,18 +75,22 @@ public class Customer {
 				while (rs.next()){
 					
 					String cname = rs.getString("cname");
+					String gender =rs.getString("gender");
 					String email = rs.getString("email");
+					
 					String city = rs.getString("city");
 					String phone= Integer.toString(rs.getInt("phone"));
+					String region= rs.getString("region");
 					String cID= Integer.toString(rs.getInt("cID"));
 					
 					// Add a row into the html table
 					result += "<div class='card'><h5 class='card-header'>" + cname + "</h5>";
 					result += "<div class='card'><h5 class='card-header'>" + cID+ "</h5>";
+					result += "<div class='card'><h5 class='card-header'>" + gender+ "</h5>";
+					result += "<div class='card'><h5 class='card-header'>" + phone + "</h5>";
 					result += "<div class='card'><h5 class='card-header'>" + email + "</h5>";
 					result += "<div class='card'><h5 class='card-header'>" + city + "</h5>";
-					result += "<div class='card'><h5 class='card-header'>" + phone + "</h5>";
-			
+					result += "<div class='card'><h5 class='card-header'>" + region + "</h5>";
 					
 					// buttons
 					result += "<div class='form-row'><form method='post' action='customer.jsp'>" 
@@ -99,7 +104,7 @@ public class Customer {
 				// Complete the html table
 			
 		}catch (Exception e){
-			result = "Error while reading the projects.";
+			result = "Error while reading the customer data.";
 			System.err.println(e.getMessage());
 		}
 		return result;
@@ -122,11 +127,11 @@ public class Customer {
 			while(rs.next()) {
 				result = "<form method='post' action='customer.jsp'>"
 						+ "Name : <input name='nm' type='text' value = '"+rs.getString("cname")+"' class='form-control'><br>"
-						+ "Gender: <input name='gender' type='text' value = '"+rs.getString("gender")+"' class='form-control' row='10'><br>"
+						+ "Gender: <input name='gr' type='text' value = '"+rs.getString("gender")+"' class='form-control' row='10'><br>"
 						+ "Phone: <input name='pn' type='text' value = '"+Integer.toString(rs.getInt("phone"))+"' class='form-control' row='10'><br>"
 						+ "Email: <input name='em' type='text' value = '"+rs.getString("email")+"' class='form-control' row='10'><br>"
 						+ "City: <input name='cy' type='text' value = '"+rs.getString("city")+"' class='form-control' row='10'><br>"		
-						+ "Region: <input name='region' type='text' value = '"+rs.getString("region")+"' class='form-control' row='10'><br>"		
+						+ "Region: <input name='rn' type='text' value = '"+rs.getString("region")+"' class='form-control' row='10'><br>"		
 						+ "<form method='post' action='customer.jsp'>"
 						+ "<input name='btnUpdate' type='submit' value='Update' class='btn btn-info'>"
 						+ "<input name='cId' type='hidden' " + " value='" + cID + "'>" + "</form><br>";
@@ -135,7 +140,7 @@ public class Customer {
 			
 			con.close();
 		}catch(Exception e) {
-			result = "Error while geting the projects.";
+			result = "Error while geting the customer data.";
 			System.err.println(e.getMessage());
 		}
 		return result;		
@@ -168,7 +173,7 @@ public class Customer {
 			result = "Updated successfully";
 
 		}catch(Exception e) {
-			result = "Error while updating the projects.";
+			result = "Error while updating the customer data.";
 			System.err.println(e.getMessage());
 		}		
 		
@@ -194,7 +199,7 @@ public class Customer {
 			result = "Record has been Deleted Successfully";
 
 		}catch(Exception e) {
-			result = "Error while Deleting the Project detail.";
+			result = "Error while Deleting the customer detail.";
 			System.err.println(e.getMessage());
 		}
 		

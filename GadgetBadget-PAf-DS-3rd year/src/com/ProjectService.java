@@ -45,9 +45,9 @@ public class ProjectService {
 		JsonObject projectObject = new JsonParser().parse(projectData).getAsJsonObject();
 	 
 		//Read the values from the JSON object
-		String projectID = projectObject.get("prId").getAsString(); 
-		String title = projectObject.get("tit").getAsString(); 
-		String description = projectObject.get("desc").getAsString(); 
+		String projectID = projectObject.get("projectID").getAsString(); 
+		String title = projectObject.get("title").getAsString(); 
+		String description = projectObject.get("description").getAsString(); 
 	 
 		String output = projectObj.updateProject(projectID, title, description); 
 		return output; 

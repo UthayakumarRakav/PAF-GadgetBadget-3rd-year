@@ -2,16 +2,22 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>GadgetBadget-PAf-DS-3rd year</display-name>
   
-  <servlet>
-<servlet-name>Jersey Web Application</servlet-name>
-<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
-<load-on-startup>1</load-on-startup>
+<servlet>
+	<servlet-name>Jersey Web Application</servlet-name>
+	<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+	<load-on-startup>1</load-on-startup>
 </servlet>
+
 <servlet-mapping>
-<servlet-name>Jersey Web Application</servlet-name>
-<url-pattern>/CustomerService/*</url-pattern>
+	<servlet-name>Jersey Web Application</servlet-name>
+	<url-pattern>/LoginService/*</url-pattern>
+	<url-pattern>/CustomerService/*</url-pattern>
+	<url-pattern>/ResearcherService/*</url-pattern>
+ 	<url-pattern>/ProjectService/*</url-pattern>
+ 	<url-pattern>/OrderService/*</url-pattern>
+ 	<url-pattern>/PaymentService/*</url-pattern>
 </servlet-mapping>
-  
+
   
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

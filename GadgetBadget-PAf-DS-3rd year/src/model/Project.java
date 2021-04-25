@@ -38,7 +38,7 @@ public class Project {
 			}
 		
 			// create a prepared statement
-			String query = " insert into projects(`projectID`,`title`,`description`)" + " values (?, ?, ?)";
+			String query = " insert into projects(`researcherID`,`projectID`,`title`,`description`)" + " values (1,?, ?, ?)";
 			PreparedStatement preparedStmt = con.prepareStatement(query);
 			// binding values
 			preparedStmt.setInt(1, 0);

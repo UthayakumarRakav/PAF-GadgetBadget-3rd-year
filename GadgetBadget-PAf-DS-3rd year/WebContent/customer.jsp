@@ -16,7 +16,7 @@
 <%
 		if(request.getParameter("cId") != null){
 			Customer CustomerUpdate = new Customer();
-			String stMsg = CustomerUpdate.updateCustomer(request.getParameter("cId"), request.getParameter("nm"), request.getParameter("gender"), request.getParameter("pn"),request.getParameter("em"),request.getParameter("cy"),request.getParameter("region"));
+			String stMsg = CustomerUpdate.updateCustomer(request.getParameter("cId"), request.getParameter("nm"), request.getParameter("gr"), request.getParameter("pn"),request.getParameter("em"),request.getParameter("cy"),request.getParameter("rn"));
 			session.setAttribute("statusMessage", stMsg);
 		}
 %>
@@ -50,13 +50,14 @@
 	<div class="row">
  		<div class="col">
  		<br><br>
- 		<div class="form-row">
- 		<br><br>
- 		
+ 		<div class="form-row"> 		
  		<input name="cname" type="text" value="GadgetBadget" readonly="readonly">
+ 		<form method="post" action="researcher.jsp">
+			<input name="researcher" type="submit" value="Researcher Service" class="btn btn-info" style="margin-left:490%;">
+		</form>
  		</div>
  		<br><br>
-		<h1>GadgetBadget Management</h1><br>
+		<h1>GadgetBadget Management Registration</h1><br>
 
 
 
@@ -73,7 +74,7 @@
 					+ "Email : <input name='email' type='email' class='form-control'><br>"
 					+ "City : <input name='city' type='text' class='form-control'><br>"
 					+ "Region : <input name='region' type='text' class='form-control'><br>"
-					+ "<input name='btnSubmit' type='submit' value='Insert' class='btn btn-primary'>" + "</form>");
+					+ "<input name='btnSubmit' type='submit' value='submit' class='btn btn-primary'>" + "</form>");
 		}
 	
 	%>

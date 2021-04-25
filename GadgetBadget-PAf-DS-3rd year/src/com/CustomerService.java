@@ -21,7 +21,7 @@ public class CustomerService {
 	@GET
 	@Path("/") 
 	@Produces(MediaType.TEXT_HTML) 
-	public String readProjects() { 
+	public String readCustomer() { 
 		 return customer.readCustomer(); 
 	}
 	
@@ -30,8 +30,8 @@ public class CustomerService {
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
 	@Produces(MediaType.TEXT_PLAIN) 
 	public String insertCustomer(@FormParam("cname") String cname, @FormParam("cID") String cID,@FormParam("phone") String phone,
-			@FormParam("email") String email,@FormParam("city") String city) { 
-		String output = customer.insertCustomer(cname, cID,phone,email,city); 
+			@FormParam("email") String email,@FormParam("city") String city,@FormParam("region") String region) { 
+		String output = customer.insertCustomer(cname, cID,phone,email,city,region); 
 		return output; 
 	}
 	
@@ -46,11 +46,13 @@ public class CustomerService {
 		//Read the values from the JSON object
 		String cID = customerObject.get("prId").getAsString(); 
 		String cname= customerObject.get("nm").getAsString(); 
+		String gender= customerObject.get("gr").getAsString(); 
 		String phone= customerObject.get("pn").getAsString(); 
 		String email= customerObject.get("em").getAsString(); 
 		String city= customerObject.get("cy").getAsString(); 
+		String region= customerObject.get("rn").getAsString(); 
 	 
-		String output = customer.updateCustomer(cID, cname, phone,email,city); 
+		String output = customer.updateCustomer(cID, cname,gender, phone,email,city,region); 
 		return output; 
 	}
 	
@@ -58,7 +60,7 @@ public class CustomerService {
 	@Path("/") 
 	@Consumes(MediaType.APPLICATION_XML) 
 	@Produces(MediaType.TEXT_PLAIN) 
-	public String deleteProject(String customerData) { 
+	public String deleteCustomer(String customerData) { 
 		//Convert the input string to an XML document
 		Document doc = Jsoup.parse(customerData, "", Parser.xmlParser()); 
 	 

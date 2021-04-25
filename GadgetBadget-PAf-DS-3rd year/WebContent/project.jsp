@@ -57,10 +57,12 @@
 	<div class="row">
  		<div class="col">
  		<br><br><br><br><br>
- 		
-		<h1>Project Management</h1><br>
-
-
+ 		<div class='form-row'>
+		<h1>Project Management</h1>
+		<form method="post" action="Order.jsp">
+			<input name="order" type="submit" value="Order Service" class="btn btn-info" style="margin-left:560%;">
+		</form>
+		</div>
 
 	<%
 		if(request.getParameter("id") != null){
