@@ -157,7 +157,7 @@ public class Order {
 				
 				con.close();
 			}catch(Exception e) {
-				result = "Error while geting the projects.";
+				result = "Error while geting the orders.";
 				System.err.println(e.getMessage());
 			}
 			return result;		
@@ -192,7 +192,7 @@ public class Order {
 				result = "Updated successfully";
 
 			}catch(Exception e) {
-				result = "Error while updating the projects.";
+				result = "Error while updating the orders.";
 				System.err.println(e.getMessage());
 			}		
 			
@@ -218,7 +218,7 @@ public class Order {
 				result = "Record has been Deleted Successfully";
 
 			}catch(Exception e) {
-				result = "Error while Deleting the Project details";
+				result = "Error while Deleting the Order details";
 				System.err.println(e.getMessage());
 			}
 			
